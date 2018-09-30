@@ -103,6 +103,7 @@ a.btn:hover {
 .header {
   background: #00BCD4;
   color: #fff;
+  margin-top: -20px;
 }
 .header a {
   color: #fff;
@@ -168,12 +169,12 @@ a.btn:hover {
   font-size: 28px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .header .intro {
   background: #00a5bb;
-  padding-top: 90px;
+  padding-top: 80px;
   padding-bottom: 40px;
   position: relative;
   font-size: 16px;
@@ -184,8 +185,8 @@ a.btn:hover {
 }
 .header .contact-info {
   background: #008fa1;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 16px;
 }
 .header .contact-info ul {
