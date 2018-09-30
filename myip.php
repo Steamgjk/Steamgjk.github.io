@@ -11,4 +11,14 @@
  $btm = $_POST['beijingtime'];
  $sql = "INSERT INTO `INFO` (`ID`, `IP`, `CName`, `CID`, `VisTime`) VALUES (NULL, '$ip', '$cname', '$cid', '$btm')";
  $result=mysqli_query($conn,$sql);//设置指定编码格式
+ //if($cid!='110000')
+ {
+ 	$to = "steam1994@163.com";
+	$subject = "Visit from".$ip." ".$cname." ".$cid." ".$btm;;
+	$message = $ip." ".$cname." ".$cid." ".$btm;
+	$headers = "From: $from";
+	mail($to,$subject,$message,$headers);
+	echo "Mail Sent.";
+ }
 ?>
+
