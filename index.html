@@ -20,6 +20,12 @@
 <!-- Theme CSS -->  
 <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
 
+<script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8" charset="utf-8"></script>
+ <script type="text/javascript">
+      var i=returnCitySN;
+      alert('您的IP<u>' + i['cip'] + '</u>归属地为<u>' + i['cname'] + '</u>');
+ </script>
+
 </head> 
 
 <body>
@@ -28,7 +34,7 @@
 	<div class="top-bar container-fluid">
 		<div class="actions">
 			<a class="btn hidden-xs" href="mailto:steam1994@163.com"><i class="fa fa-paper-plane" aria-hidden="true"></i> Email Me</a>
-			<a class="btn" href="https://cloud.tsinghua.edu.cn/f/8f5220ac2587457cae2c/?dl=1"><i class="fa fa-download" aria-hidden="true"></i> Download My Resume</a>
+			<a class="btn" href="https://cloud.tsinghua.edu.cn/f/8f5220ac2587457cae2c/?dl=1"><i class="fa fa-download" aria-hidden="true"></i> Download My CV</a>
 		</div><!--//actions-->
 		<ul class="social list-inline" style="display:none">
 			<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -47,7 +53,9 @@
 			<div class="profile">
 				<p>Hello, I am Jinkun, a third-year master student in 
 				Department of Computer Scient and Technology, Tsinghua University, supervised by Professor <a href="http://www.tsinghua.edu.cn/publish/csen/4623/2010/20101225163855518778544/20101225163855518778544_.html" style="text-decoration: underline" target="_blank">Dan Li</a>. I have a broad interest in networking, including user space network stack, data center network, resource management, social network, etc. Currently, I am focusing on 
-				the interdisplinary area of Network & AI. More specifically, I am studying how to leverage the network knowledge/technology to accelerate AI/ML applications. </p>
+				the interdisplinary area of Network & AI. More specifically, I am studying how to leverage the network knowledge/technology to accelerate AI/ML applications. My CV is attached <a href="https://cloud.tsinghua.edu.cn/f/8f5220ac2587457cae2c/?dl=1" style="text-decoration: underline" target="_blank">here</a>.
+
+				</p>
 			</div><!--//profile-->
 		</div><!--//container-->
 	</div><!--//intro-->
@@ -69,7 +77,6 @@
 					<li><a class="scrollto" href="#eudcation-section">Education</a></li>
 					<li><a class="scrollto" href="#projects-section">Projects</a></li>
 					<li><a class="scrollto" href="#publications-section">Publications</a></li>
-					
 					<li><a class="scrollto" href="#talks-section">Talks</a></li>
 					<li><a class="experiences" href="#experiences-section">Experiences</a></li>
 					<li><a class="rewards" href="#rewards-section">Rewards</a></li>
@@ -581,6 +588,8 @@
 		</li>
 		
 	</section><!--//section-->
+
+
 
 	
 </div><!--//wrapper-->
