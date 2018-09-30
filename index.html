@@ -49,8 +49,10 @@
 		$.ajax({
                 type: "POST",
                 url: "www.baidu.com",
-                dataType:json,
-                data: "username=" + $("#TxtUserName").val().toString() + "&pwd=" + $("#TxtPassword").val().toString(),
+                dataType:'json',
+                data: {
+                	user:'1'
+                },
                 success: function (data) {
                     if (data == "1") {
                         alert("ok")
