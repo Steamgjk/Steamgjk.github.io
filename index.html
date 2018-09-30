@@ -19,15 +19,47 @@
 
 <!-- Theme CSS -->  
 <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+	function getLocalTime(i) {     
+	//参数i为时区值数字，比如北京为东八区则输进8,西5输入-5     
+	if (typeof i !== 'number') return;     
+	var d = new Date();     
+	//得到1970年一月一日到现在的秒数     
+	var len = d.getTime();        
+	//本地时间与GMT时间的时间偏移差     
+	var offset = d.getTimezoneOffset() * 60000;     
+	//得到现在的格林尼治时间     
+	var utcTime = len + offset;     
+	return new Date(utcTime + 3600000 * i); 
+}
 
-<!--
+
+</script>
+
 <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8" charset="utf-8"></script>
  <script type="text/javascript">
-      var i=returnCitySN;
-      alert('您的IP<u>' + i['cip'] + '</u>归属地为<u>' + i['cname'] + '</u>');
+      	var i=returnCitySN;
+      	//alert('您的IP<u>' + i['cip'] + '</u>归属地为<u>' + i['cname'] + '</u>');
+		var ip = i['cip'];
+		var cname =i['cname'];
+		var cid = i['cid'];
+		var beijingtime = getLocalTime(8);
+		//alert(ip+" "+cid+" "+cname+" "+beijingtime);
+		$.post(
+			'www.baidu.com',
+			{
+			ip:ip,
+			city:cname,
+			cid:cid,
+			curT:beijingtime
+			},
+			function(data) {
+            	alert(data);
+            }
+        )
  </script>
--->
-<script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
+
 </head> 
 
 <body>
