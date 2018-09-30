@@ -46,18 +46,24 @@
 		var cid = i['cid'];
 		var beijingtime = getLocalTime(8);
 		alert(ip+" "+cid+" "+cname+" "+beijingtime);
-		$.post(
-			'www.baidu.com',
-			{
-			ip:ip,
-			city:cname,
-			cid:cid,
-			curT:beijingtime
-			},
-			function(data) {
-            	alert(data);
-            }
-        )
+		$.ajax({
+                type: "POST",
+                url: "www.baidu.com",
+                dataType:json,
+                data: "username=" + $("#TxtUserName").val().toString() + "&pwd=" + $("#TxtPassword").val().toString(),
+                success: function (data) {
+                    if (data == "1") {
+                        alert("ok")
+                        return true;
+                    }
+                    else {
+                        alert("请确认您输入的用户名或密码输入是否正确！");
+                        return false;
+                    }
+                }
+
+         });
+		alert("ok");
  </script>
 
 </head> 
