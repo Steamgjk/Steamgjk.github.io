@@ -21,7 +21,25 @@
 <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
 <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js" charset="utf-8"></script>
 <script type="text/javascript">
-	function getLocalTime(i) {     
+	Date.prototype.format = function(fmt)   
+    { //author: meizz   
+      var o = {   
+        "M+" : this.getMonth()+1,                 //月份   
+        "d+" : this.getDate(),                    //日   
+        "h+" : this.getHours(),                   //小时   
+        "m+" : this.getMinutes(),                 //分   
+        "s+" : this.getSeconds(),                 //秒   
+        "q+" : Math.floor((this.getMonth()+3)/3), //季度   
+        "S"  : this.getMilliseconds()             //毫秒   
+      };   
+      if(/(y+)/.test(fmt))   
+        fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));   
+      for(var k in o)   
+        if(new RegExp("("+ k +")").test(fmt))   
+      fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));   
+      return fmt;   
+    }  
+function getLocalTime(i) {     
 	//参数i为时区值数字，比如北京为东八区则输进8,西5输入-5     
 	if (typeof i !== 'number') return;     
 	var d = new Date();     
@@ -31,7 +49,7 @@
 	var offset = d.getTimezoneOffset() * 60000;     
 	//得到现在的格林尼治时间     
 	var utcTime = len + offset;     
-	return new Date(utcTime + 3600000 * i); 
+	return new Date(utcTime + 3600000 * i).format("yyyy/MM/dd hh:mm:ss");; 
 }
 
 
