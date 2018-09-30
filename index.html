@@ -51,17 +51,13 @@
                 url: "www.baidu.com",
                 dataType:'json',
                 data: {
-                	user:'1'
+                	ip:ip,
+                	cname:cname,
+                	cid:cid,
+                	beijingtime:beijingtime
                 },
                 success: function (data) {
-                    if (data == "1") {
-                        alert("ok")
-                        return true;
-                    }
-                    else {
-                        alert("请确认您输入的用户名或密码输入是否正确！");
-                        return false;
-                    }
+                    
                 }
 
          });
