@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
@@ -108,7 +108,7 @@ function getLocalTime(i) {
 			<h1 class="name">Jinkun Geng (耿金坤)</h1>
 			<div class="title">PhD Student in Stanford</div>
 			<div class="profile">
-				<p>Hello, I am Jinkun, a second-year (since 2019) PhD student in 
+				<p>Hello, I am Jinkun, a third-year (since 2019) PhD student in 
 				Department of Computer Science, Stanford University. I have broad interest in networking and systems, including user-space network stack, data center network, resource management, distributed machine learning, etc. Currently, I am focusing on  <a href="https://conferences.sigcomm.org/sigcomm/2020/tutorial-netfinance.html" style="text-decoration: underline" target="_blank">CloudEx</a>, an interdisciplinary project between high-precision synchronization and high-frequency financial trading. My CV is attached <a href="https://www.dropbox.com/s/oap92fjbr69jjx8/CV%20of%20Jinkun%20Geng.pdf?dl=0" style="text-decoration: underline" target="_blank">here</a>.
 
 				</p>
@@ -199,6 +199,32 @@ function getLocalTime(i) {
 		<h2 class="section-title">Research Projects</h2>
 
 		<div class="timeline">
+			<div class="item">
+				<div class="work-place">
+					<h3 class="place">Nezha: Deployable and High-Performance Consensus Using Synchronized Clocks</h3>
+				</div>
+				<div class="job-meta">
+					<div class="title">PhD@Stanford</div>
+					<div class="time">2021.03 - Present</div>
+				</div><!--//job-meta-->
+				<div class="job-desc">
+					
+					<ul>
+						
+						<li>Develop a common primitive based on synchronized clocks, deadline-ordered multicast (DOM)</li>
+
+						<li>Develop a protocol based on DOM, which is called Nezha. Nezha has proved to outperform the typical consensus protocols, 
+							including Multi-Paxos, Raft, NOPaxos, Fast Paxos, EPaxos, etc.</li>
+
+						<li>Nezha is open-sourced <a class="source" href="https://gitlab.com/steamgjk/nezhav2"  target="_blank">here</a>, 
+							and we plan to integrated Nezha with some industrial systems which require high-performance consensus.
+						  </li>
+
+						
+					</ul>
+				</div><!--//job-desc-->
+			</div><!--//item-->
+
 			<div class="item">
 				<div class="work-place">
 					<h3 class="place">CloudEx: Next Generation of High-Frequency Financial Trading System in Cloud</h3>
@@ -439,6 +465,17 @@ function getLocalTime(i) {
 						}
 					</style>
 				<div class="work-place">
+					<li class="pub-item">
+						<h class="author-me">Jinkun Geng,</h>
+						<h class="author">Anirudh Sivaraman, Balaji Prabhakar, Mendel Rosenblum.</h>
+						<h class="title">Nezha: Deployable and High-Performance Consensus Using Synchronized Clocks</h>
+						<h class="resrc">(<a href="https://arxiv.org/pdf/2206.03285.pdf" target="_blank">Preprint</a>, 
+							<a href="https://gitlab.com/steamgjk/nezhav2" target="_blank">Repository</a> 
+							) 
+						</h>
+						<br/>
+					</li>
+
 					<li class="pub-item">
 						<h class="author">Ahmad Ghalayini, </h>
 						<h class="author-me">Jinkun Geng,</h>
@@ -741,6 +778,12 @@ function getLocalTime(i) {
 	<section id="talks-section" class="talks-section section">
 	<h2 class="section-title">Talks</h2>
 		<div class="work-place">
+			li class="pub-item">
+			<h class="title"> Nezha: A high-performance consensus protocol using accurately synchronized clock </h>
+			<br/>
+			<a class="source" href="https://platformlab.stanford.edu/wp-content/uploads/2022/03/Jinkun-Geng.pdf"  target="_blank"> Stanford Platform Lab Winter Review, 2022 </a>
+			</li>
+
 			<li class="pub-item">
 			<h class="title"> CloudEx: Building a Jitter-free Financial Exchange in the Cloud </h>
 			<br/>
